@@ -1,0 +1,26 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Compile code (simulasi)
+      run: echo "Tidak ada kompilasi yang diperlukan untuk proyek ini."
+
+    - name: Run the program
+      run: node index.js "Ini hanya contoh aja pak"

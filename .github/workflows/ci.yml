@@ -16,7 +16,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Install dependencies
+    - name: Install Dependency
       run: npm install
 
     - name: Compile tes.cpp
